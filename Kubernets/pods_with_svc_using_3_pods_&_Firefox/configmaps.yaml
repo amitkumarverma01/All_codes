@@ -1,0 +1,145 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dewa-html
+data:
+  index.html: |
+    <html>
+    <head>
+      <style>
+        body {
+          background-color: #141414;
+          color: #e50914;
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+          font-size: 3em;
+          animation: slideIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+          0% {
+            transform: translateY(-50px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Welcome to <span style="color: white;">Dewa</span> Pod</h1>
+    </body>
+    </html>
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vardha-html
+data:
+  index.html: |
+    <html>
+    <head>
+      <style>
+        body {
+          background-color: #141414;
+          color: #e50914;
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+          font-size: 3em;
+          animation: slideIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+          0% {
+            transform: translateY(-50px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Welcome to <span style="color: white;">Vardha</span> Pod</h1>
+    </body>
+    </html>
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: naarang-html
+data:
+  index.html: |
+    <html>
+    <head>
+      <style>
+        body {
+          background-color: #141414;
+          color: #e50914;
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+          font-size: 3em;
+          animation: slideIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+          0% {
+            transform: translateY(-50px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Welcome to <span style="color: white;">Naarang</span> Pod</h1>
+    </body>
+    </html>

@@ -1,0 +1,55 @@
+kubectl apply -f namespace.yaml
+kubectl config set-context --current --namespace=myapp-namespace
+
+
+kubectl apply -f configmap.yaml
+
+
+kubectl apply -f secret.yaml
+
+
+kubectl apply -f deployment.yaml
+
+
+kubectl apply -f service.yaml
+
+
+kubectl get all
+kubectl get pods
+kubectl logs <pod-name>
+kubectl port-forward svc/myapp-service 8080:80
+kubectl exec -it <pod-name> -- /bin/bash
+
+
+
+🔁 Do a Rollout Update--
+
+kubectl set image deployment/myapp-deployment myapp-container=nginx:1.25
+kubectl rollout status deployment/myapp-deployment
+kubectl rollout history deployment/myapp-deployment
+
+kubectl rollout undo deployment/myapp-deployment
+
+
+🔧 Scale the Deployment
+
+kubectl scale deployment myapp-deployment --replicas=4
+
+🏷 Add Labels and Filter-
+
+kubectl label pod <pod-name> env=prod
+kubectl get pods --show-labels
+kubectl get pods -l env=prod
+
+
+📊 Check Resource Usage (if metrics-server is running)--
+
+kubectl top pod
+kubectl top node
+
+
+🧹 Clean Up
+
+kubectl delete -f .         # Delete everything in folder
+kubectl delete namespace myapp-namespace
+

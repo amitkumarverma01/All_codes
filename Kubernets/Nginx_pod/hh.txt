@@ -1,0 +1,24 @@
+apiVersion: v1 # API version used for creating the Pod
+kind: Pod # We're defining a Pod resource
+metadata:
+  name: nginx-pod # Name of the Pod
+  labels:
+    app: nginx # Labels are useful for selection and management
+
+spec: # Specification of the Pod
+  containers: # List of containers (a Pod can run multiple containers)
+    - name: nginx-container # Name of the container inside the Pod
+      image: nginx:latest # Docker image to use, pulled from Docker Hub
+      ports:
+        - containerPort: 80 # Expose port 80 inside the container (used by NGINX)
+
+      # Optional: Mount a volume (e.g., for custom NGINX config)
+      volumeMounts:
+        - name: nginx-html
+          mountPath: /usr/share/nginx/html # Override default NGINX content location
+
+  volumes:
+    - name: nginx-html
+      configMap:
+        name: nginx-html-config # Use a ConfigMap for HTML content
+

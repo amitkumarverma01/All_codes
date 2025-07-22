@@ -1,0 +1,62 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-html-config
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sundar Sa Page</title>
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .card {
+      background-color: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      color: #5f27cd;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    .footer {
+      margin-top: 2em;
+      font-size: 0.9em;
+      color: #888;
+    }
+    </style>
+    </head>
+    <body>
+    <div class="card">
+    <h1>👋 Namaste!</h1>
+    <p>Yeh ek sundar sa HTML page hai jo NGINX ke zariye serve ho raha hai.</p>
+    <div class="footer">~ Bahut pyar se Banaya gaya 💖</div>
+    </div>
+    </body>
+    </html>
+
+ 

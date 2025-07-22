@@ -1,0 +1,17 @@
+Amit@adityashankar509gmail.onmicrosoft.com
+
+terraform apply -var-file="../..secrets/secrets.tfvars"
+
+
+STEPS TO RUN A PIPELINE--
+
+
+create a app registration provide this contributor role at subscription level, also provide the azure blob permission =read, write access role 
+create a service connection
+create agent pool
+create a agent to run pipeline
+
+create your pipeline--
+start with classic pipeline
+
+then do the same via yaml file
