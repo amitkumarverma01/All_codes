@@ -1,0 +1,21 @@
+kubectl apply -f azure-secret.yaml
+kubectl apply -f azure-pv.yaml
+kubectl apply -f azure-pvc.yaml
+kubectl apply -f nginx-pod.yaml
+kubectl port-forward pod/nginx-pod 7777:80 &
+
+
+kubectl get pv
+kubectl get pvc
+kubectl get pod
+kubectl get secret azure-secret
+kubectl get secret azure-secret -o yaml
+
+
+# Convert your secrets into base64 coded---
+echo -n "pvteststorage" | base64
+# Output: cHZ0ZXN0c3RvcmFnZQ==
+
+echo -n "ClXpYp7B8Qi0yzMIZ8jmZW+EPhGomawLM7wCnLgP6fkdkuPC8s+dW9Y+qCEdIpBXlRDHtODJnYcC+ASt+GyARg==" | base64
+# Output: Q2xYcFlwN0I4UWkweXpNSVo4am1aVytFUGhHb21hd0xNN3dDbkxnUDZma2RrdVBDOHMrZFc5WStx
+Q0VkSXBCWGxSREh0T0RKblljQytBU3QrR3lBUmc9PQ==

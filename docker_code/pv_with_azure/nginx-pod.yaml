@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: azure-pod
+spec:
+  containers:
+  - name: mylovely-nginx
+    image: nginx
+    volumeMounts:
+    - mountPath: "/mnt/azure"
+      name: azure-storage
+  volumes:
+  - name: azure-storage
+    persistentVolumeClaim:
+      claimName: azure-pvc

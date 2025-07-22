@@ -1,0 +1,15 @@
+
+docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=Surveillance1@123 -p 3306:3306 -d mysql:8.0
+docker exec -it mysql-container mysql -u root -p
+CREATE DATABASE elearning_db;
+USE elearning_db;
+
+CREATE TABLE Courses (
+    CourseId INT AUTO_INCREMENT PRIMARY KEY,
+    CourseName VARCHAR(255) NOT NULL,
+    InstructorName VARCHAR(255) NOT NULL,
+    Lessons JSON NOT NULL DEFAULT ('[]')
+);
+
+SHOW DATABASES;
+SHOW tables;
